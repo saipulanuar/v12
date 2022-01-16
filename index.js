@@ -53,12 +53,13 @@ isSelf = false
 isPublic = true
 
 //JANGAN DI GANTI
-fakeyoi = ["Lexxy Official"]
+fakeyoi = ["KingOfBear Official"]
 api = ["https://myselfff.herokuapp.com/docs"]
 simbol = ["•"]
 const botName = setting.BotName
 const owner = setting.OwnerNumber
 const ownerName = setting.OwnerName
+const apiKey = setting.ApiBear
 
 //APIKEY
 zeksApi = [""]
@@ -452,6 +453,8 @@ break
 case 'othersmenu':
 reply2(`❏ 𝙊𝙩𝙝𝙚𝙧𝙨
 ${simbol} ${prefix}store
+${simbol} ${prefix}simi
+${simbol} ${prefix}simih
 ${simbol} ${prefix}infobot
 ${simbol} ${prefix}cekprem
 ${simbol} ${prefix}scbot
@@ -1527,7 +1530,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply('Yah gagal, coba ulangi ^_^')
 buffer = fs.readFileSync(ran)
-fakethumb(buffer,'By Lexxy Official')
+fakethumb(buffer,'By KingOfBear Official')
 fs.unlinkSync(ran)
 })
 break
@@ -1958,6 +1961,14 @@ sticLoad(from)
 ini = await fetchJson(`https://api-yogipw.herokuapp.com/api/yt/playmp4?query=${bo}`)
 p4 = await getBuffer(get.url_video)
 Lexxy.sendMessage(from, p4, video)
+break
+case 'simi':
+case 'simih':
+if (args.length == 0) return reply(`Text Nya Mana\nContoh: ${prefix + command} hai`)
+boo = args.join(" ")
+bll = await fetchJson(`https://apikey-bear3.herokuapp.com/api/f/simi?apikey=${apiKey}&query=${boo}`)
+ini_txt =`*Simi: ${bll.result}*`
+reply(ini_txt)
 break
 case 'ply3':
 case 'playmp3':
