@@ -20,10 +20,10 @@ Simpel WhatsApp Bot v12
 ## BUILPACK HEROKU
 
 ```FFMPEG :```
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+https://github.com/saipulanuar/heroku-buildpack-ffmpeg-latest.git
 
-```WEBP :```
-https://github.com/clhuang/heroku-buildpack-webp-binaries.git
+```IMAGEMAGICK :```
+https://github.com/saipulanuar/heroku-buildpack-imagemagick.git
 
 ---------
 
