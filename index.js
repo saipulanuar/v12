@@ -724,6 +724,9 @@ Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By KingOfBear
 break
 case 'menu':
 const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = Lexxy.user.phone
+quotesnya = await fetchJson(`https://apikey-bear2.herokuapp.com/api/randomquote?apikey=${apiKey}`)
+quotes = quotesnya.result.quotes
+by = quotesnya.result.author
 ros = await Lexxy.prepareMessageFromContent(from,{
 "listMessage": {
 "title": '◩ 𝘽𝙤𝙩 𝙄𝙣𝙛𝙤',
@@ -749,7 +752,14 @@ ros = await Lexxy.prepareMessageFromContent(from,{
 ◪ 𝘾𝙝𝙖𝙩 𝙄𝙣𝙛𝙤
 □» 𝐆𝐫𝐨𝐮𝐩 : *( ${groups.length} )*
 □» 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 : *( ${privat.length} )*
-□» 𝐓𝐨𝐭𝐚𝐥 : *( ${totalChat.length} )*`,
+□» 𝐓𝐨𝐭𝐚𝐥 : *( ${totalChat.length} )*
+━━━━━━━━━━━━━━━━━━
+*𝘘𝘜𝘖𝘛𝘌𝘚  :* 
+_${quotes}_
+
+*𝘘𝘜𝘖𝘛𝘌𝘚 _BY_ :*
+_${by}_
+━━━━━━━━━━━━━━━━━━`,
 "buttonText": "𝙋𝙄𝙇𝙄𝙃 𝘿𝙄𝙎𝙄𝙉𝙄",
 "listType": "SINGLE_SELECT",
 "sections": [
